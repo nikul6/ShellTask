@@ -1,4 +1,4 @@
-import { View, Text, Image, ImageBackground, StyleSheet } from 'react-native'
+import { View, Text, Image, ImageBackground, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import CustomButton from '../components/CustomButton'
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -22,14 +22,16 @@ export default function Disclaimer({ navigation }) {
         <Image source={require('../aasets/logo.png')} style={{ resizeMode: 'contain' }} />
       </ImageBackground>
       <View style={styles.mainConatiner}>
-        <View style={styles.subContainer}>
-          <Text style={styles.disclaimerMainText}>Disclaimer</Text>
-          <Text style={styles.disclaimerText}>{disclaimerTextStr}</Text>
-        </View>
-        <CustomButton
-          title={'I Accept'}
-          onPress={handleAccept}
-        />
+        <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
+          <View style={styles.subContainer}>
+            <Text style={styles.disclaimerMainText}>Disclaimer</Text>
+            <Text style={styles.disclaimerText}>{disclaimerTextStr}</Text>
+          </View>
+          <CustomButton
+            title={'I Accept'}
+            onPress={handleAccept}
+          />
+        </ScrollView>
       </View>
     </View>
   )
@@ -40,13 +42,15 @@ const styles = StyleSheet.create({
     fontSize: 20, marginTop: 20, fontWeight: 'bold'
   },
   disclaimerText: {
-    fontSize: 15, marginTop: 20, fontWeight: '400', lineHeight: 30, textAlign: 'left'
+    fontSize: 15, marginTop: 20, fontWeight: '400', lineHeight: 26, textAlign: 'left'
   },
   bgConatiner: {
     flex: 0.5, justifyContent: 'center', alignItems: 'center'
   },
   mainConatiner: {
-    backgroundColor: '#fff', flex: 1, marginTop: -90, borderRadius: 30,
+    backgroundColor: '#fff', flex: 1, marginTop: -90,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
     shadowOffset: {
       width: 0,
       height: 2,

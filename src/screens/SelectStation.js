@@ -72,13 +72,15 @@ const styles = StyleSheet.create({
         color: '#ADB7C6'
     },
     headerText: {
-        fontSize: 20, fontWeight: 'bold'
+        fontSize: 20, fontWeight: 'bold', marginBottom:30
     },
     bgConatiner: {
         flex: 0.5, justifyContent: 'center', alignItems: 'center'
     },
     mainConatiner: {
-        backgroundColor: '#fff', flex: 1, marginTop: -90, borderRadius: 30,
+        backgroundColor: '#fff', flex: 1, marginTop: -90,
+        borderTopRightRadius: 30,
+        borderTopLeftRadius: 30,
         shadowOffset: {
             width: 0,
             height: 2,
