@@ -10,9 +10,11 @@ Requirements
 Step 1: Clone this repository and then open in Visual Code Editor
 
 Step 2: Run the following command for first time.
+
         npm install
         
 Step 3: Run the following command for run the application.
+
         npx expo start
         
 
