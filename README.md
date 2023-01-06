@@ -19,9 +19,9 @@ Step 3: Run the following command for run the application.
         
 
 Step 4: First is the Login Screen. Input the following credentials.
+
            email: eve.holt@reqres.in
         password: cityslicka
-        
         - If you can enter wrong email or password so that time show the alert box and they say is "Invalid email or password".
    
 Step 5: After successful login. You can redirect the Disclaimer screen.
@@ -33,4 +33,10 @@ Step 6: In Select Station screen, list of petrol station.
         
 Step 7: After selecting sttion you can redirect details(selectd station screen) screen.
        - Here is timer, you can start and stop using button.
-       - If you can press the button start at that time timer is statred and  
+       - If you can press the button start at that time timer is statred and Station Subscribed is shown else Subscribe.
+Station is shown.
+       - The details screen has individual timers that are saved in storage. If the application is closed or restarted, the timer will resume from the previous time.
+
+Thank You.
+
+Step 4: 
