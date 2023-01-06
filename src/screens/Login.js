@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import TextInputBox from '../components/TextInputBox';
 import CustomButton from '../components/CustomButton';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -7,6 +7,22 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 export default function Login({ navigation }) {
+
+  useEffect(() => {
+    const checkUserLogin = async () => {
+      try {
+        const loginToken = await AsyncStorage.getItem('token');
+        const disclaimerAccepted = await AsyncStorage.getItem('disclaimerAccepted');
+        if (loginToken !== null && disclaimerAccepted !== null) {
+          navigation.navigate('SelectStation');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    checkUserLogin();
+  }, []);
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
@@ -20,6 +36,7 @@ export default function Login({ navigation }) {
         .then(res => res.json())
         .then(data => {
           if (data.token) {
+            AsyncStorage.setItem('token', data.token);
             AsyncStorage.getItem('disclaimerAccepted').then(disclaimerAccepted => {
               if (disclaimerAccepted !== 'true') {
                 navigation.navigate('Disclaimer');
