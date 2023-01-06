@@ -22,7 +22,6 @@ Step 4: First is the Login Screen. Input the following credentials.
 
         email: eve.holt@reqres.in
         password: cityslicka
-        
         - If you can enter wrong email or password so that time show the alert box and they say is "Invalid email or password".
    
 Step 5: After successful login. You can redirect the Disclaimer screen.
