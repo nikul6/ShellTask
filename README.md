@@ -34,8 +34,7 @@ Step 6: In Select Station screen, list of petrol station.
 Step 7: After selecting sttion you can redirect details(selectd station screen) screen.
 
        - Here is timer, you can start and stop using button.
-       - If you can press the button start at that time timer is statred and Station Subscribed is shown else Subscribe.
-Station is shown.
+       - If you can press the button start at that time timer is statred and Station Subscribed is shown else Subscribe Station is shown.
        - The details screen has individual timers that are saved in storage. If the application is closed or restarted, the timer will resume from the previous time.
 
 Thank You.
