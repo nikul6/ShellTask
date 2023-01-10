@@ -21,7 +21,7 @@ Step 3: Run the following command for run the application.
 Step 4: First is the Login Screen. Input the following credentials.
 
         email: eve.holt@reqres.in
-        password: cityslicka
+        password: pistol
         - If you can enter wrong email or password so that time show the alert box and they say is "Invalid email or password".
    
 Step 5: After successful login. You can redirect the Disclaimer screen.
