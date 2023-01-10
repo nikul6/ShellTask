@@ -57,7 +57,7 @@ export default function Login({ navigation }) {
 
   const Schema = Yup.object().shape({
     email: Yup.string().email('Invalid Email').required('Email is required'),
-    password: Yup.string().min(8, 'Password must be more than 8 characters').required('Password is required'),
+    password: Yup.string().min(6, 'Password must be more than 6 characters').required('Password is required'),
   })
 
   return (
